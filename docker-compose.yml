@@ -61,6 +61,12 @@ services:
     ports:
       - "6379:6379"
 
+  composer:
+    image: "composer"
+    volumes:
+      - "./web:/app"
+    command: install
+
   phpmyadmin:
     container_name: phpmyadmin
     image: phpmyadmin/phpmyadmin
