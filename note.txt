@@ -1,0 +1,6 @@
+--helper--commands
+
+docker kill $(docker ps -q) //kills all containers , -q gets all ids
+docker rm $(docker ps -a -q) //removes all container
+docker rmi $(docker images -q) //removes all images
+docker run -it --rm -v `pwd`:/app composer install //running composer

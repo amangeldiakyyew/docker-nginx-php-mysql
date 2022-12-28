@@ -65,7 +65,7 @@ services:
     container_name: composer
     image: "composer"
     volumes:
-      - "./web:/app"
+      - "./web/main:/app"
     command: install
 
   phpmyadmin:
