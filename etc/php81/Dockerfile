@@ -6,6 +6,8 @@ RUN apt-get install zip unzip -y
 RUN apt-get install -y git
 RUN apt-get install -y curl
 
+RUN pecl install redis
+RUN docker-php-ext-enable redis
 RUN docker-php-ext-install zip
 RUN docker-php-ext-install mysqli
 RUN docker-php-ext-install bcmath
